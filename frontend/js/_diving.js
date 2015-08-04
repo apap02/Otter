@@ -6,6 +6,7 @@
 		},
 		vardosync: undefined,	//timeout varable
 		records: [],
+		//---- add a record to tmp array by developer ---------------------------------------------
 		addRecord: function(userID, targetID, actDesc, actData){
 			var tmp,
 				dtime = new Date();
@@ -23,7 +24,7 @@
 				clearTimeout(Dive.vardosync);
 			Dive.vardosync = setTimeout(Dive.doSyncRecords,	1500);
 		},
-		//---- ¤W¶Ç¦Üserver ------------------------------------------------------------------------
+		//---- upload 2 server --------------------------------------------------------------------
 		doSyncRecords: function(){
 			if(Dive.records.length == 0){
 				Dive.syncRecords();
